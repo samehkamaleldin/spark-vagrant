@@ -1,2 +1,2 @@
 # spark-vagrant
-Spark on vagrant of demonstration purposes
+A running version of `Spark` on `Vagrant` for demonstration purposes
