@@ -1,15 +1,21 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
+#-------------------------------------------------------------------------------
+# Project     | spark-vagrant
+# Module      | vagrant configuration file
+# Author      | sameh kamal
+# Description | defining virtual machine configuration and specification
+#-------------------------------------------------------------------------------
 Vagrant.configure(2) do |config|
+  # use ubuntu trust
+  config.vm.box = "ubuntu/trusty64"
 
- config.vm.box              = "ubuntu/trusty64"
- config.vm.box_check_update = false
- # config.vm.synced_folder "../data", "/vagrant_data"
+  # config.vm.network "public_network", ip: "172.16.202.196", bridge: 'enp0s25'
+  # config.vm.synced_folder "../data", "/vagrant_data"
 
- config.vm.provider "virtualbox" do |vb|
-   vb.gui    = true
-   vb.memory = "1024"
- end
- 
+  # Customize machine memory
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+  end
+
+  # use shell provisioning from external script
+  config.vm.provision "shell", path: "./provision/bootstrap.sh"
 end
