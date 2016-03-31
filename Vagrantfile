@@ -6,7 +6,7 @@
 #-------------------------------------------------------------------------------
 Vagrant.configure(2) do |config|
   # use ubuntu trust
-  config.vm.box = "centos7"
+  config.vm.box = "ubuntu/trusty64"
 
   # config.vm.network "public_network", ip: "172.16.202.196", bridge: 'enp0s25'
   config.vm.synced_folder "~/work", "/blabla"
