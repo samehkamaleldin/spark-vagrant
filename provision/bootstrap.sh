@@ -26,9 +26,9 @@ echo "PATH=$PATH:$JAVA_HOME/bin"  | sudo tee -a /etc/environment
 
 # install spark from binaries
 wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.0-bin-hadoop2.4.tgz
-tar xvf spark-1.6.0-bin-hadoop2.4.tgz
+tar  xvf spark-1.6.0-bin-hadoop2.4.tgz
 sudo mkdir -p /opt/local/
 sudo mv spark-1.6.0-bin-hadoop2.4 /opt/local/spark-1.6.0
 
 # start spark master
-# /opt/local/spark-1.6.0/sbin/start-master.sh
+/opt/local/spark-1.6.0/sbin/start-master.sh
