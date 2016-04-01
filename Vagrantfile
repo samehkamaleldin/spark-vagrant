@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
   # use ubuntu trusty 14.4.4 64-bit
   config.vm.box = "ubuntu/trusty64"
 
-  # configure network  
+  # configure network
   # config.vm.network "public_network", ip: "172.16.202.196", bridge: 'enp0s25'
 
   # mount examples into the box machine on /example
