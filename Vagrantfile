@@ -4,6 +4,7 @@
 # Author      | sameh kamal
 # Description | defining virtual machine configuration and specification
 #-------------------------------------------------------------------------------
+
 Vagrant.configure(2) do |config|
 
   # use ubuntu trusty 14.4.4 64-bit
